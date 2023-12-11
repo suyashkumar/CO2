@@ -19,6 +19,7 @@ void CO2Monitor::Setup() {
 
     if (!scd30.begin(0x61, &Wire1, 0)) {
         Serial.println("Failed to find SCD30 chip");
+        while(1){ delay(10);}
     }
 
     if (!scd30.setMeasurementInterval(MEASUREMENT_INTERVAL_SECS)){
