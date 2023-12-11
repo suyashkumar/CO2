@@ -10,8 +10,6 @@
 
 class Display {
 public:
-    Display();
-
     void Init();
     void Update(const float& co2_ppm, const float& temp_c);
 private:

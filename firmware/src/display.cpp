@@ -1,10 +1,6 @@
 #include "display.h"
 #include "Wire.h"
 
-
-Display::Display() {
-}
-
 void Display::Init() {
     display.begin(0x3C, true);
     display.setRotation(1);

@@ -10,13 +10,11 @@ void sendSerialData(const float& co2_ppm, const float& temp_c) {
     Serial.println(buffer);
 }
 
-CO2Monitor::CO2Monitor() {}
-
 void CO2Monitor::Setup() {
     delay(1000);
-    Wire1.setPins(SDA1, SCL1); // Necessary for QT PY ESP32.
     Serial.begin(115200);
 
+    Wire1.setPins(SDA1, SCL1); // Necessary for QT PY ESP32, which has multiple I2C busses.
     if (!scd30.begin(0x61, &Wire1, 0)) {
         Serial.println("Failed to find SCD30 chip");
         while(1){ delay(10);}

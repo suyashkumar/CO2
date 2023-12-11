@@ -6,7 +6,6 @@
 
 class CO2Monitor {
 public:
-    CO2Monitor();
     void Setup();
     void HandleLoop();
 private:
