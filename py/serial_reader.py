@@ -14,7 +14,7 @@ def main():
             try:
                 data = json.loads(line)
             except ValueError as e:
-                print(r"Non JSON console data: {line}")
+                print(f"Non JSON console data: {line}")
                 continue
             data['time'] = datetime.datetime.now().__str__()
             data_with_time = json.dumps(data)
