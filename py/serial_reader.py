@@ -1,3 +1,7 @@
+"""
+This is a very simple program to read (hopefully) JSON from the serial console,
+add timestamp data, and write out to disk.
+"""
 import serial
 import json
 import datetime
@@ -7,7 +11,11 @@ def main():
     with open('data.ndjson', 'a') as fd:
         while True:
             line = ser.readline()
-            data = json.loads(line)
+            try:
+                data = json.loads(line)
+            except ValueError as e:
+                print(r"Non JSON console data: {line}")
+                continue
             data['time'] = datetime.datetime.now().__str__()
             data_with_time = json.dumps(data)
             print(data_with_time)

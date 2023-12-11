@@ -5,7 +5,6 @@ void Display::Init() {
     display.begin(0x3C, true);
     display.setRotation(1);
     display.clearDisplay();
-    display.display();
     display.setTextSize(2);
     display.setTextColor(SH110X_WHITE);
     display.setCursor(0,0);

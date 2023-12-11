@@ -1,6 +1,6 @@
 #include "co2_monitor.h"
-#include <Adafruit_SCD30.h>
-#include <Wire.h>
+#include "Adafruit_SCD30.h"
+#include "Wire.h"
 
 #define MEASUREMENT_INTERVAL_SECS 6
 

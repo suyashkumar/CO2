@@ -1,4 +1,3 @@
-
 #include "co2_monitor.h"
 
 CO2Monitor monitor;

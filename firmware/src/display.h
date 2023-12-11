@@ -1,12 +1,8 @@
-//
-// Created by Suyash Kumar on 12/9/23.
-//
-
 #ifndef CO2_DISPLAY_H
 #define CO2_DISPLAY_H
 
-#include <Adafruit_GFX.h>
-#include <Adafruit_SH110X.h>
+#include "Adafruit_GFX.h"
+#include "Adafruit_SH110X.h"
 
 class Display {
 public:
