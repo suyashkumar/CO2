@@ -1,0 +1,3 @@
+[submodule "3DModels/scad-text"]
+	path = 3DModels/scad-text
+	url = https://github.com/suyashkumar/scad-text.git
